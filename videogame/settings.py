@@ -33,10 +33,10 @@ COLORS = [BLUE, GREEN, PURPLE, YELLOW]
 
 try:
     MONSTER_IMAGES = [
-        pygame.image.load("blue_monster.png"),
-        pygame.image.load("green_monster.png"),
-        pygame.image.load("purple_monster.png"),
-        pygame.image.load("yellow_monster.png"),
+        pygame.image.load("videogame/assets/blue_monster.png"),
+        pygame.image.load("videogame/assets/green_monster.png"),
+        pygame.image.load("videogame/assets/purple_monster.png"),
+        pygame.image.load("videogame/assets/yellow_monster.png"),
     ]
 except Exception as e:  # pylint: disable=broad-except
     print(f"Error loading images: {e}")

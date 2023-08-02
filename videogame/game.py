@@ -3,7 +3,6 @@ This module contains the game class for the "Monster Wrangler" game.
 """
 import random
 import pygame
-from player import Player
 from monster import Monster
 from settings import (
     WINDOW_HEIGHT,
@@ -46,7 +45,7 @@ class Game:
             "monster_group": monster_group,
         }
         self.sounds = {
-            "next_level": pygame.mixer.Sound("sounds/next_level.wav"),
+            "next_level": pygame.mixer.Sound("./assets/next_level.wav"),
         }
         self.font = pygame.font.Font("freesansbold.ttf", 24)
 
