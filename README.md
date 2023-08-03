@@ -35,10 +35,17 @@ pip install pygame
 ```
 
 Clone this repository or download the code.
-Navigate to the directory containing the game script and execute:
+
+Navigate to the root directory containing the wrangler.py script and execute:
 
 ```
-python game_script_name.py
+chmod u+x wrangler.py
+```
+
+to use
+
+```
+./wrangler.py
 ```
 
 ## Game Assets
