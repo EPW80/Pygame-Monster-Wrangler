@@ -16,6 +16,18 @@ Dynamic Difficulty: As players progress, the number of monsters and the game's c
 
 ## Installation
 
+Create a virtual environment with
+
+```
+python3 -m venv env
+```
+
+Activate environment
+
+```
+source env/bin/activate
+```
+
 Ensure you have pygame installed. If not, you can install it using pip:
 
 ```
@@ -38,8 +50,6 @@ Please ensure the following assets are present in the same directory as your gam
 knight.png: Player's sprite
 
 blue_monster.png, green_monster.png, purple_monster.png, yellow_monster.png: Monster sprites
-
-yellow_monster.png: Monster images.
 
 ### Sounds:
 
@@ -64,6 +74,10 @@ Each level introduces more monsters. To progress to the subsequent level, player
 Capturing an incorrect monster deducts a life. Depleting all lives ends the game.
 
 Players can deploy the warp function (using the space bar) to teleport to a safety zone. Note: Warp uses are limited.
+
+## Demo
+
+![](demo.gif)
 
 ## Contributor
 
