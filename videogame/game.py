@@ -1,7 +1,11 @@
-import pygame
+""" This is the main game loop. """
+
 import random
+import pygame
+
 
 # Initialize pygame
+# pylint: disable=no-member
 pygame.init()
 
 # Set display window
@@ -42,7 +46,7 @@ class Game:
         green_image = pygame.image.load("videogame/images/green_monster.png")
         purple_image = pygame.image.load("videogame/images/purple_monster.png")
         yellow_image = pygame.image.load("videogame/images/yellow_monster.png")
-        # This list cooresponds to the monster_type attribute int 0 -> blue, 1 -> green, 2 -> purple, 3 -> yellow
+        # This list cooresponds to the monster_type
         self.target_monster_images = [
             blue_image,
             green_image,
@@ -70,13 +74,14 @@ class Game:
     def draw(self):
         """Draw the HUD and other to the display"""
         # Set colors
+        # pylint: disable=C0103
         WHITE = (255, 255, 255)
         BLUE = (20, 176, 235)
         GREEN = (87, 201, 47)
         PURPLE = (226, 73, 243)
         YELLOW = (243, 157, 20)
 
-        # Add the monster colors to a list where the index of the color matches target_monster_images
+        # Add the monster colors to a list
         colors = [BLUE, GREEN, PURPLE, YELLOW]
 
         # Set text
@@ -180,7 +185,7 @@ class Game:
             self.monster_group.remove(monster)
 
         # Add monsters to the monster group
-        for i in range(self.round_number):
+        for _ in range(self.round_number):
             self.monster_group.add(
                 Monster(
                     random.randint(0, WINDOW_WIDTH - 64),
@@ -230,6 +235,7 @@ class Game:
         global running
 
         # Set color
+        # pylint: disable=C0103
         WHITE = (255, 255, 255)
         BLACK = (0, 0, 0)
 
@@ -321,17 +327,17 @@ class Player(pygame.sprite.Sprite):
 class Monster(pygame.sprite.Sprite):
     """A class to create enemy monster objects"""
 
-    def __init__(self, x, y, image, monster_type):
+    def __init__(self, x, y, image, monster_type):  # pylint: disable=C0103
         """Initialize the monster"""
         super().__init__()
         self.image = image
         self.rect = self.image.get_rect()
         self.rect.topleft = (x, y)
 
-        # Monster type is an int 0 -> blue, 1 -> green, 2 -> purple, 3 -> yellow
         self.type = monster_type
 
         # Set random motion
+        # pylint: disable=C0103
         self.dx = random.choice([-1, 1])
         self.dy = random.choice([-1, 1])
         self.velocity = random.randint(1, 5)

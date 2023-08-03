@@ -6,11 +6,10 @@ setup_info = {
     "name": "videogame",
     "version": "0.1",
     "description": "A package to support writing games with PyGame",
-    # TODO: Optional, add more information to the setup.py script
-    # "long_description": open("README.md").read(),
-    # "author": "Tuffy Titan",
-    # "author_email": "tuffy@csu.fullerton.edu",
-    # "url": "https://some.url/somehwere/maybe/github",
+    "long_description": open("README.md").read(),
+    "author": "Erik Williams",
+    "author_email": "erikparrawilliams@tutanota.com",
+    "url": "https://github.com/EPW80/Pygame-Monster-Wrangler",
 }
 
 setup(**setup_info)
