@@ -77,7 +77,7 @@ Players can deploy the warp function (using the space bar) to teleport to a safe
 
 ## Demo
 
-[](demo.gif)
+![](./videogame/images/demo.gif)
 
 ## Contributor
 
